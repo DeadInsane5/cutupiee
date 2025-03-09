@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Letter.css';
 
-const Letter = ({head, para, greet, sender, initials}) => {
+const Letter = ({ head, para, greet, sender, initials }) => {
   return (
     <div className="card">
       <div className="relative bg-black w-[300px] sm:w-[350px] group transition-all duration-700 aspect-video flex items-center justify-center">
@@ -9,13 +10,13 @@ const Letter = ({head, para, greet, sender, initials}) => {
           <p className="text-xl sm:text-2xl font-semibold text-gray-500 font-serif">
             {head}
           </p>
-          <p className="px-10 text-[10px] sm:text-[12px] text-neutral-700">
+          <p className="px-10 text-[16px] sm:text-[12px] text-neutral-700">
             {para}
           </p>
-          <p className="font-serif text-[10px] sm:text-[12px text-neutral-700">
+          <p className="font-serif text-[14px] sm:text-[12px text-neutral-700">
             {greet}
           </p>
-          <p className="font-sans text-[10px] text-neutral-700 pt-5">{sender}</p>
+          <p className="font-sans text-[14px] text-neutral-700 pt-5">{sender}</p>
         </div>
         <button className="seal bg-rose-500 text-neutral-100 w-10 aspect-square rounded-full z-40 text-[10px] flex items-center justify-center font-semibold [clip-path:polygon(50%_0%,_80%_10%,_100%_35%,_100%_70%,_80%_90%,_50%_100%,_20%_90%,_0%_70%,_0%_35%,_20%_10%)] group-hover:opacity-0 transition-all duration-1000 group-hover:scale-0 group-hover:rotate-180 border-4 border-rose-900">
           {initials}

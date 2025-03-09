@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Player.css";
 import Pattern from "./Pattern";
 
@@ -28,12 +29,12 @@ const Player = () => {
     if (audioRef.current) {
       audioRef.current.src = track.src;
       audioRef.current.load();
-  
+
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => setIsPlaying(true)) 
-          .catch((error) => console.log("Autoplay blocked:", error)); 
+          .then(() => setIsPlaying(true))
+          .catch((error) => console.log("Autoplay blocked:", error));
       }
     }
   };
@@ -57,6 +58,9 @@ const Player = () => {
                 <p className="font-bold">{track.name}</p>
               </li>
             ))}
+            <li>
+              <Link to="/album" className="next-page-button">Next Page</Link>
+            </li>
           </ol>
         </div>
       </div>
