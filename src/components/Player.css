@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.player {
+    background-color: #ffffff78;
+    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
